@@ -1,0 +1,10 @@
+# secrets & credentials — never commit real values
+config.json
+*.pem
+
+# runtime state (audit trail / inventory export)
+abm_audit.log
+abm_inventory.csv
+
+# tooling
+.impeccable/

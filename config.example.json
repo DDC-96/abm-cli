@@ -1,0 +1,18 @@
+{
+  "client_id": "PASTE_CLIENT_ID_HERE",
+  "key_id": "PASTE_KEY_ID_HERE",
+  "pem_path": "~/scripts/abm_tool/abm_private_key.pem",
+  "audit_log": "",
+  "slack": {
+    "enabled": false,
+    "webhook_url": "",
+    "bot_token": "",
+    "channel": "",
+    "client_id": "",
+    "client_secret": ""
+  },
+  "csv": {
+    "enabled": false,
+    "path": ""
+  }
+}
