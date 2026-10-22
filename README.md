@@ -1,8 +1,8 @@
 # ABM-CLI
 
-An interactive (and scriptable) command-line tool for managing devices in **Apple Business Manager** via the [Apple Business API](https://developer.apple.com/documentation/applebusinessapi).
+An interactive (and scriptable) command-line tool for managing macOS devices in **Apple Business Manager** via the [Apple Business API](https://developer.apple.com/documentation/applebusinessapi).
 
-Look up devices by serial, move them between MDM servers, unassign them, check Activation Lock status, and release them from your org — interactively, one-shot, or in bulk from a CSV.
+**Look up devices by serial, move them between MDM servers, unassign them, check Activation Lock status, and release them from your org — interactively, one-shot, or in bulk from a CSV.**
 
 ```
  █████╗ ██████╗ ███╗   ███╗   ██████╗██╗     ██╗
@@ -16,9 +16,9 @@ Look up devices by serial, move them between MDM servers, unassign them, check A
 ## Features
 
 - **Device lookup by serial** — model, product family, assignment status, current MDM server, Activation Lock status
-- **Change MDM server** — interactive picker of servers integrated in your ABM (`ASSIGN_DEVICES`)
+- **Change MDM server** — interactive picker of servers integrated in your ABM (`ASSIGN_DEVICES`) (ex: jamf-prod, jamf-sandbox, fleet-prod, fleet-dev)
 - **Unassign** a device from its MDM server (`UNASSIGN_DEVICES`)
-- **Release** a device from the org (`RELEASE_DEVICES`) — permanent, guarded by a pre-release checklist
+- **Release** a device from the org (`RELEASE_DEVICES`) — **permanent**, guarded by a pre-release checklist
 - **Pre-release checklist** — warns when Activation Lock is ON or the device is still MDM-assigned; `--yes` alone won't override it, `--force` will
 - **Live activity polling** — long-running activities report *"still pending"* with a ready-to-run `status` command instead of a misleading failure
 - **One-shot subcommands + batch mode** — scriptable, with `--yes` for automation
@@ -38,13 +38,13 @@ brew install jq   # the rest ship with macOS
 
 ## Quick start (no credentials)
 
-Try the entire flow against a fake ABM:
+Try the entire flow against a mock ABM Server:
 
 ```sh
 ./abm_tool.sh --mock
 ```
 
-Mock devices: `DEMO1234XYZ` (assigned, Activation Lock ON) and `DEMO5678ABC` (unassigned). Anything else returns "not found". Mock state resets each run; set `ABM_MOCK_STATE_DIR=/some/path` to persist it across runs.
+Mock devices: `DEMO1234XYZ` (assigned, Activation Lock ON) and `DEMO5678ABC` (unassigned). Anything else returns "not found". Mock state resets each run; set `ABM_MOCK_STATE_DIR=/some/path` to persist it across runs. **USING FLAG `--mock` WILL DO NOTHING. THIS IS FAKE DATA.**
 
 ## Setup (real ABM)
 
