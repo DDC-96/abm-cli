@@ -6,5 +6,3 @@ config.json
 abm_audit.log
 abm_inventory.csv
 
-# tooling
-.impeccable/
