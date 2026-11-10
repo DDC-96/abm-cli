@@ -1,6 +1,6 @@
 # ABM-CLI
 
-An interactive (and scriptable) command-line tool for managing macOS devices in **Apple Business Manager** via the [Apple Business API](https://developer.apple.com/documentation/applebusinessapi).
+An interactive (and scriptable) command-line tool for managing macOS devices in **Apple Business Manager** via the [Apple Business API](https://developer.apple.com/documentation/applebusinessapi). THIS IS FOR LOCAL TESTING ONLY AT THIS TIME.
 
 **Look up devices by serial, move them between MDM servers, unassign them, check Activation Lock status, and release them from your org — interactively, one-shot, or in bulk from a CSV.**
 
